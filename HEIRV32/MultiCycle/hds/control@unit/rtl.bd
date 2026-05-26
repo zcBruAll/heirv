@@ -135,7 +135,7 @@ value "C:\\Users\\allan.brunner\\Downloads\\car-heirv-main\\Prefs\\..\\HEIRV32\\
 )
 (vvPair
 variable "date"
-value "19.05.2026"
+value "26.05.2026"
 )
 (vvPair
 variable "day"
@@ -147,7 +147,7 @@ value "mardi"
 )
 (vvPair
 variable "dd"
-value "19"
+value "26"
 )
 (vvPair
 variable "entity_name"
@@ -175,7 +175,7 @@ value "allan.brunner"
 )
 (vvPair
 variable "graphical_source_date"
-value "19.05.2026"
+value "26.05.2026"
 )
 (vvPair
 variable "graphical_source_group"
@@ -187,7 +187,7 @@ value "VS-W11669"
 )
 (vvPair
 variable "graphical_source_time"
-value "13:33:03"
+value "10:46:53"
 )
 (vvPair
 variable "group"
@@ -263,7 +263,7 @@ value "rtl"
 )
 (vvPair
 variable "time"
-value "13:33:03"
+value "10:46:53"
 )
 (vvPair
 variable "unit"
@@ -1259,7 +1259,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "Arial,8,0"
 )
-xt "53200,4000,62600,5000"
+xt "53200,4000,65100,5000"
 st "
 by %user on %dd %month %year
 "
@@ -4280,8 +4280,8 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "0,0,1921,1048"
-viewArea "-7500,-1500,139791,78540"
+windowSize "0,32,1921,1080"
+viewArea "-7500,-1500,139791,76104"
 cachedDiagramExtent "-6000,0,90000,76900"
 pageSetupInfo (PageSetupInfo
 ptrCmd ""
@@ -4305,7 +4305,7 @@ exportStdPackageRefs 1
 )
 hasePageBreakOrigin 1
 pageBreakOrigin "-7000,0"
-lastUid 1574,0
+lastUid 1599,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0

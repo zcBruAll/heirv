@@ -16,10 +16,10 @@ BEGIN
           ALUControl <= "001";
 		-- add / addi
 		elsif funct3 = "000" then
-		  ALUControl <= "000":
+		  ALUControl <= "000";
 		-- sll / slli
 		elsif funct3 = "001" then
-		  ALUControl <= "110":
+		  ALUControl <= "110";
 		-- slt / slti
         elsif funct3 = "010" then
           ALUControl <= "101";

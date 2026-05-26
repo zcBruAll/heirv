@@ -12,7 +12,7 @@ BEGIN
       when "0100011" => immSrc <= "01";
       when "1100011" => immSrc <= "10";
       when "1101111" => immSrc <= "11";
-      when "1100111" => immSrc <= "11";
+      when "1100111" => immSrc <= "00";
       when others    => immSrc <= "--";
     end case;
   end process decode;
