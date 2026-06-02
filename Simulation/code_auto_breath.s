@@ -67,7 +67,7 @@ dimming:
 safe_dim:
     sub  x11, x11, x17     # T_high -= breath_step
 
-# BUTTON DEBOUNCING AND CONTROL
+# BUTTON DEBOUNCING & CONTROL
 check_btns:
     add  x21, x0, x31      # Read buttons from x31[span_6](end_span)
     xori x23, x20, -1      # NOT prev_state
