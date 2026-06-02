@@ -67,7 +67,7 @@ dimming:
 safe_dim:
     sub  x11, x11, x17     # T_high -= breath_step
 
-# BUTTON DEBOUNCING AND CONTROL
+# BUTTON DEBOUNCING & CONTROL
 check_btns:
     add  x21, x0, x31      # Read buttons from x31[span_6](end_span)
     xori x23, x20, -1      # NOT prev_state
@@ -78,10 +78,13 @@ btn_0:
     # INCREASE SPEED (Decrease breath_delay)
     andi x24, x22, 1
     beq  x24, x0, btn_1
-    sub  x14, x14, x25     # breath_delay -= speed_step
     slt  x28, x14, x25     # Prevent going below 0
-    beq  x28, x0, btn_1
+    beq  x28, x0, safe_dec_speed
     addi x14, x0, 2        # Clamp to a minimum delay
+	jal x0, btn_1
+	
+safe_dec_speed:
+	sub x14, x14, x25
 
 btn_1:
     # DECREASE SPEED (Increase breath_delay)
@@ -102,10 +105,13 @@ btn_3:
     # DECREASE MAX INTENSITY
     andi x24, x22, 8
     beq  x24, x0, end_cycle
-    sub  x13, x13, x26     # max_intensity -= intensity_step
     slt  x28, x13, x26     # Prevent underflow
-    beq  x28, x0, end_cycle
+    beq  x28, x0, safe_dec_intensity
     addi x13, x0, 10       # Clamp to a minimum intensity
+	jal x0, end_cycle
+	
+safe_dec_intensity:
+    sub  x13, x13, x26     # max_intensity -= intensity_step
 
 end_cycle:
     jal  x0, main_loop     # Return to start of PWM
